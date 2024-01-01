@@ -1,0 +1,5 @@
+---
+
+- name: Setup for debian
+  ansible.builtin.include_tasks: install_debian_packages.yml
+  when: ansible_os_family == 'Debian'

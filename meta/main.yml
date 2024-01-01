@@ -1,0 +1,15 @@
+galaxy_info:
+  author: ngotzmann, lsiemer
+  namespace: neatleap
+  description: Manages the state (installed/removed) of a helm installation
+
+  license: GPL-3.0-only
+  min_ansible_version: "2.11"
+
+  platforms:
+  - name: Debian
+
+  galaxy_tags: 
+    - debian
+    - helm
+    - kubernetes

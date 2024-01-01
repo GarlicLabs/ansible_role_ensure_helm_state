@@ -1,0 +1,5 @@
+---
+
+helm_state: present
+helm_apt_key: https://baltocdn.com/helm/signing.asc
+helm_apt_repository_string: deb [arch=amd64] https://baltocdn.com/helm/stable/debian/ all main
