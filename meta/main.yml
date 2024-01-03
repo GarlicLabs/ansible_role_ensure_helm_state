@@ -1,6 +1,6 @@
 galaxy_info:
   author: ngotzmann, lsiemer
-  namespace: neatleap
+  namespace: garliclabs
   description: Manages the state (installed/removed) of a helm installation
 
   license: GPL-3.0-only

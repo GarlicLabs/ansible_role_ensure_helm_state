@@ -1,6 +1,6 @@
 # ansible_role_ensure_helm_state
 
-[![Validate infrastructure as code](https://github.com/NeatLeap/ansible_role_ensure_helm_state/actions/workflows/validation.yml/badge.svg)](https://github.com/NeatLeap/ansible_role_ensure_helm_state/actions/workflows/validation.yml)
+[![Validate infrastructure as code](https://github.com/garliclabs/ansible_role_ensure_helm_state/actions/workflows/validation.yml/badge.svg)](https://github.com/garliclabs/ansible_role_ensure_helm_state/actions/workflows/validation.yml)
 
 Basic installation or removal of helm package manager, currently just debian is supported.  
 
