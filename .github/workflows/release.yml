@@ -1,0 +1,49 @@
+---
+
+name: Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+
+  test:
+      runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          distro:
+            - debian12
+            - debian11
+  
+      steps:
+        - name: Check out the codebase.
+          uses: actions/checkout@v4
+          with:
+            path: 'ansible_role_ensure_helm_state'
+  
+        - name: Set up Python 3.
+          uses: actions/setup-python@v5
+          with:
+            python-version: '3.x'
+  
+        - name: Install test dependencies.
+          run: pip3 install -r ansible_role_ensure_helm_state/pip_requirements.txt
+  
+        - name: Run Molecule tests.
+          run: molecule test
+          working-directory: 'ansible_role_ensure_helm_state'
+          env:
+            PY_COLORS: '1'
+            ANSIBLE_FORCE_COLOR: '1'
+            MOLECULE_DISTRO: ${{ matrix.distro }}
+  release:
+      needs:
+        - test
+      runs-on: ubuntu-latest
+      steps:
+        - name: galaxy
+          uses: robertdebock/galaxy-action@1.2.0
+          with:
+            galaxy_api_key: ${{ secrets.galaxy_api_key }}
