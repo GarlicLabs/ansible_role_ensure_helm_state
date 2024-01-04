@@ -2,7 +2,6 @@ galaxy_info:
   author: ngotzmann, lsiemer
   namespace: garliclabs
   description: Manages the state (installed/removed) of a helm installation
-  alternative_clone_url: https://github.com/GarlicLabs/ansible_role_ensure_helm_state.git
 
   license: GPL-3.0-only
   min_ansible_version: "2.11"
