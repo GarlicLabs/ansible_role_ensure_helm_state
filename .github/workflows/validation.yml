@@ -19,8 +19,7 @@ jobs:
       - name: Run ansible-lint
         uses: ansible/ansible-lint@cc7f2f599318aa344fca575c635c2caa6d492a14
       - id: foo
-        uses: actions/hello-world-composite-action@v1
-
+        uses: actions/composite_action_ansible_molecule@v0.1
 
   Security:
     runs-on: ubuntu-latest
